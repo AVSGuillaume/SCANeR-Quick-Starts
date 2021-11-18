@@ -58,7 +58,7 @@
         {% assign navigation_pages = site.html_pages | sort: 'order' %}
         {% for p in navigation_pages %}
           {% if p.short == page.parent %}
-            <a class="parent" href="{{site.baseurl}}/{{ p.url }}">
+            <a id="parent" href="{{site.baseurl}}/{{ p.url }}">
               {{ p.short }}
             </a>
           {% endif %}
