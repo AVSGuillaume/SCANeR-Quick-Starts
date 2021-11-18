@@ -58,7 +58,7 @@
         <a href="{{site.baseurl}}/">
               Home
         </a>
-        <h1>{{ page.short }}</h1>
+        <h3>{{ page.short }}</h3>
         {% assign navigation_pages = site.html_pages | sort: 'order' %}
         {% for p in navigation_pages %}
           {% if p.group == page.group %}
