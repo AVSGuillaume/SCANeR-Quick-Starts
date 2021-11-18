@@ -53,8 +53,8 @@
         </header>
     </div>
 
-    <div id="nav_left">
-      {% if page.group %}
+    {% if page.group %}
+      <div id="nav_left">
         {% assign navigation_pages = site.html_pages | sort: 'order' %}
         {% if page.parent %}
           {% for p in navigation_pages %}
@@ -73,8 +73,8 @@
             </a><br>
           {% endif %}
         {% endfor %}
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
     
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
