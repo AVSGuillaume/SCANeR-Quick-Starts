@@ -60,12 +60,11 @@
           {% for p in navigation_pages %}
             {% if p.short == page.parent %}
               <a id="parent" href="{{site.baseurl}}/{{ p.url }}">
-                {{ p.short }}
+                {{ page.group }}
               </a>
             {% endif %}
           {% endfor %}
         {% endif %}
-        <h3>{{ page.group }}</h3>
         {% for p in navigation_pages %}
           {% if p.group == page.group %}
             <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
