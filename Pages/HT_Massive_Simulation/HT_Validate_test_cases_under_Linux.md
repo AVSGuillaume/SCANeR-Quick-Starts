@@ -1,3 +1,9 @@
+---
+parent: Massive Simulation Home
+group: Massive Simulation
+short: Validate the Linux workspace
+---
+
 :arrow_left: [Guide 3. Port SCANeR workspace on Linux](HT_Port_SCANeR_workspace_under_Linux.md)
 
 # Guide 4. How to validate the new SCANeR workspace for Linux before to run it on HPC
