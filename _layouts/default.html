@@ -53,7 +53,7 @@
         </header>
     </div>
 
-    <div style="floating: left;">
+    <div style="position: fixed; left: 10px; top: 400px;">
       {% assign navigation_pages = site.html_pages | sort: 'page_level' %}
       {% for p in navigation_pages %}
         {% if p.page_level %}
