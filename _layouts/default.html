@@ -68,7 +68,7 @@
         <br>
         {% for p in navigation_pages %}
           {% if p.group == page.group %}
-            <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
+            <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
               {{ p.short }}
             </a><br>
           {% endif %}
