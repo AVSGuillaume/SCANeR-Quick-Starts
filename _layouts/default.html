@@ -60,25 +60,18 @@
       </section>
     </div>
     
-    <h3>Read Next</h3>
-{% assign page_url = page.url | replace: "index", "" | split: "/" | join: "/" %}
-
-<!-- We compare lengths - the next level should be current +1.-->
-{% assign current_level = page_url | split: "/" | size %}
-{% assign next_level = current_level | plus: 1 %}
-
-<div class="section-index">
-  <hr class="panel-line"><div class="card-columns">{% for doc in site.docs %}
-   {% assign doc_url = doc.url | replace: "index", "" %}
-    {% unless doc.url == page.url %}
-    {% assign comparison_count = doc_url | split: "/" | size %}
-    {% if next_level == comparison_count %}{% if doc_url contains page_url %}
-    <div class="card next-card">
-    <h5><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></h5>
-      <p>{{ doc.description }}</p>
-    </div>
-    {% endif %}{% endif %}{% endunless %}{% endfor %}<br>
-</div>
+    <nav class="main-nav">
+      <ul>
+        {% assign navigation_pages = site.html_pages %}
+        {% for p in navigation_pages %}
+            <li>
+              <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+                {{ p.title }}
+              </a>
+            </li>
+        {% endfor %}
+      </ul>
+    </nav>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
@@ -93,19 +86,6 @@
         {% endif %}
       </footer>
     </div>
-    
-<nav class="main-nav">
-  <ul>
-    {% assign navigation_pages = site.html_pages %}
-    {% for p in navigation_pages %}
-        <li>
-          <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
-            {{ p.title }}
-          </a>
-        </li>
-    {% endfor %}
-  </ul>
-</nav>
     
     <!-- Traffic Analytics  -->
     <script async defer data-website-id="3fa413c3-2f18-40ed-96f2-f2cd6d008ac4" src="https://scaner-quick-starts-umami.herokuapp.com/umami.js"></script>
