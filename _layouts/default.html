@@ -38,6 +38,18 @@
           
           <p id="menu">
             <a href="{{site.baseurl}}/">Home</a>
+            <ul>
+              {% assign navigation_pages = site.html_pages | sort: 'page_level' %}
+              {% for p in navigation_pages %}
+                {% if p.page_level %}
+                  <li>
+                    <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+                      {{ p.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
           </p>
           
           <!--<section id="nav">
@@ -59,21 +71,6 @@
         {{ content }}
       </section>
     </div>
-    
-    <nav class="main-nav">
-      <ul>
-        {% assign navigation_pages = site.html_pages | sort: 'page_level' %}
-        {% for p in navigation_pages %}
-          {% if p.page_level %}
-            <li>
-              <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
-                {{ p.title }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
