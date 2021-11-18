@@ -1,3 +1,9 @@
+---
+parent: Home
+group: Massive Simulation
+short: Massive Simulation Home
+---
+
 # How to run a massive simulation to test and validate an ADAS
 
 This guide will walk through the Massive Simulation workflow in SCANeR:
