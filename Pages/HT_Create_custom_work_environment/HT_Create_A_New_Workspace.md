@@ -1,3 +1,9 @@
+---
+layout: post
+title: Blogging Like a Hacker
+page_level: 2
+---
+
 :arrow_left: [First launch](../HT_FirstLaunch/HT_FirstLaunch.md)
 
 # How to create a new workspace
