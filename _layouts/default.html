@@ -98,13 +98,11 @@
   <ul>
     {% assign navigation_pages = site.html_pages %}
     {% for p in navigation_pages %}
-      {% if p.page_levele %}
         <li>
           <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
             {{ p.title }}
           </a>
         </li>
-      {% endif %}
     {% endfor %}
   </ul>
 </nav>
