@@ -1,3 +1,9 @@
+---
+parent: Massive Simulation Home
+group: Massive Simulation
+short: Prepare the Windows workspace
+---
+
 :arrow_left: [Home of Massive Simulation](HT_Massive_Simulation.md)
 
 # Guide 1. How to prepare a workspace for Massive Simulation under Windows
