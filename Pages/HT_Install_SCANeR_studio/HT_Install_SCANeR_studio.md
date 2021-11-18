@@ -1,6 +1,7 @@
 ---
+parent: Home
 group: Get Ready
-short: Install
+short: Install the Trial
 long: How to install SCANeR studio ?
 rank: 1
 ---
