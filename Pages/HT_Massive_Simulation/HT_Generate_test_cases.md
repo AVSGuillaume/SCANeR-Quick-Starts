@@ -1,3 +1,9 @@
+---
+parent: Massive Simulation Home
+group: Massive Simulation
+short: Generate scenarios
+---
+
 :arrow_left: [Guide 1. Prepare SCANeR workspace on Windows](HT_Prepare_SCANeR_workspace_under_Windows.md)
 
 # Guide 2. How to generate known and unknown test cases?
