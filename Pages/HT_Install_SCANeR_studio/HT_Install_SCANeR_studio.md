@@ -1,6 +1,13 @@
+---
+group: Get Ready
+short: Install
+long: How to install SCANeR studio ?
+rank: 1
+---
+
 :arrow_left: [Download the evaluation version of SCANeR](../HT_Download_Trial_SCANeR/HT_Download_Trial_SCANeR.md)
 
-# How to install SCANeR?
+# How to install SCANeR ?
 
 This guide walks you through the installation process for SCANeR.
 
