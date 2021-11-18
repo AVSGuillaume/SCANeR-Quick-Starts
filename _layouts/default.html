@@ -42,7 +42,7 @@
             {% for p in navigation_pages %}
               {% if p.page_level %}
                 <br>
-                <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="text-decoration: bold"{% endif %}>
+                <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
                   {{ p.title }}
                 </a>
               {% endif %}
