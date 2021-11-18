@@ -1,4 +1,5 @@
 ---
+title: How to create a new workspace
 page_level: 2
 ---
 
