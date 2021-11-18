@@ -1,3 +1,7 @@
+---
+page_level:1
+---
+
 :arrow_left: [First launch](../HT_FirstLaunch/HT_FirstLaunch.md)
 
 # How to create a new workspace
