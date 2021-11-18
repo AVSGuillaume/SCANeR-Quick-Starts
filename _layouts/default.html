@@ -54,9 +54,10 @@
     </div>
 
     <div style="position: fixed; left: 10px; top: 400px;">
-      {% assign navigation_pages = site.html_pages | sort: 'page_level' %}
+      {% if page.group %}
+      {% assign navigation_pages = site.html_pages | sort: 'order' %}
       {% for p in navigation_pages %}
-        {% if p.page_level %}
+        {% if p.group == page.group %}
           <br>
           <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
             {{ p.title }}
