@@ -1,6 +1,4 @@
 ---
-layout: post
-title: Blogging Like a Hacker
 page_level: 1
 ---
 
