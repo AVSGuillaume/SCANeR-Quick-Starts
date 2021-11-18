@@ -55,17 +55,25 @@
 
     <div style="position: fixed; left: 10px; top: 400px;">
       {% if page.group %}
+        {% assign navigation_pages = site.html_pages | sort: 'order' %}
         <a href="{{site.baseurl}}/">
               Home
         </a>
-        <h3>{{ page.group }}</h3>
-        {% assign navigation_pages = site.html_pages | sort: 'order' %}
         {% for p in navigation_pages %}
-          {% if p.group == page.group %}
-            <br>
+          {% if p.short == page.parent %}
             <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
               {{ p.short }}
             </a>
+          {% endif %}
+        {% endfor %}
+        {% if page.group %}
+        {% endif %}
+        <h3>{{ page.group }}</h3>
+        {% for p in navigation_pages %}
+          {% if p.group == page.group %}
+            <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
+              {{ p.short }}
+            </a><br>
           {% endif %}
         {% endfor %}
       {% endif %}
