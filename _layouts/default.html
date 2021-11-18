@@ -41,7 +41,7 @@
             {% assign navigation_pages = site.html_pages | sort: 'page_level' %}
             {% for p in navigation_pages %}
               {% if p.page_level %}
-                <a href="{{ p.url }}" {% if p.url == page.url %}style="text-decoration: bold"{% endif %}>
+                <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="text-decoration: bold"{% endif %}>
                   {{ p.title }}
                 </a>
               {% endif %}
