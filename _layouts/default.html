@@ -38,15 +38,6 @@
           
           <p id="menu">
             <a href="{{site.baseurl}}/">Home</a>
-            {% assign navigation_pages = site.html_pages | sort: 'page_level' %}
-            {% for p in navigation_pages %}
-              {% if p.page_level %}
-                <br>
-                <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
-                  {{ p.title }}
-                </a>
-              {% endif %}
-            {% endfor %}
           </p>
           
           <!--<section id="nav">
@@ -62,6 +53,18 @@
         </header>
     </div>
 
+    <div style="floating: left;">
+      {% assign navigation_pages = site.html_pages | sort: 'page_level' %}
+      {% for p in navigation_pages %}
+        {% if p.page_level %}
+          <br>
+          <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}style="color: red;"{% endif %}>
+            {{ p.title }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
