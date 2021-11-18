@@ -94,7 +94,20 @@
       </footer>
     </div>
     
-    
+    <nav class="main-nav">
+  <ul>
+    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+    {% for p in navigation_pages %}
+      {% if p.navigation_weight %}
+        <li>
+          <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+            {{ p.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
     
     <!-- Traffic Analytics  -->
     <script async defer data-website-id="3fa413c3-2f18-40ed-96f2-f2cd6d008ac4" src="https://scaner-quick-starts-umami.herokuapp.com/umami.js"></script>
