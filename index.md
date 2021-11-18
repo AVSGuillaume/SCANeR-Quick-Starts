@@ -1,3 +1,7 @@
+---
+short: Home
+---
+
 <table id="welcome">
   <tr>
     <td width="300px">
