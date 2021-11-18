@@ -56,14 +56,14 @@
     <div id="nav_left">
       {% if page.group %}
         {% assign navigation_pages = site.html_pages | sort: 'order' %}
-        {% for p in navigation_pages %}
-          {% if p.short == page.parent %}
-            <a id="parent" href="{{site.baseurl}}/{{ p.url }}">
-              {{ p.short }}
-            </a>
-          {% endif %}
-        {% endfor %}
-        {% if page.group %}
+        {% if page.parent %}
+          {% for p in navigation_pages %}
+            {% if p.short == page.parent %}
+              <a id="parent" href="{{site.baseurl}}/{{ p.url }}">
+                {{ p.short }}
+              </a>
+            {% endif %}
+          {% endfor %}
         {% endif %}
         <h3>{{ page.group }}</h3>
         {% for p in navigation_pages %}
