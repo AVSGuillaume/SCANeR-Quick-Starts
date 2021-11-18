@@ -52,6 +52,11 @@
 	background: url(./sprite_nav.png) no-repeat bottom right
 }
 
+#nav_left {
+	background-color: #EEEEEE;
+	border-radius: 10px;
+}
+
 .nav_home:hover {
 	background: url(./sprite_nav.png) no-repeat top right
 }
