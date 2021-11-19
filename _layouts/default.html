@@ -57,20 +57,20 @@
     
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
+      
+      <!-- group nav -->
+      {% if page.group %}
+      <div id="nav_left" class="inner">
+        <h3>{{ page.group }}</h3><br>
+        {% for p in group_pages %}
+          <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
+            {{ p.short }}
+          </a><br>
+        {% endfor %}
+      </div>
+      {% endif %}
+            
       <section id="main_content" class="inner">
-        
-        <!-- group nav -->
-        {% if page.group %}
-          <div id="nav_left">
-            <h3>{{ page.group }}</h3><br>
-            {% for p in group_pages %}
-              <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
-                {{ p.short }}
-              </a><br>
-            {% endfor %}
-          </div>
-        {% endif %}
-        
         <!-- prev -->
         {% if prev %}
           <p>
