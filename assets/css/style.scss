@@ -76,7 +76,8 @@
 }
 
 #nav_left {
-	position: fixed;
+	position: absolute;
+	width: 30%;
 	left: 20px;
 	top: 300px;
 	margin: 20px;
