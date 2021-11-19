@@ -44,8 +44,8 @@
     {% if page.group %}
       <div id="nav_left">
         <h3>{{ page.group }}</h3><br>
-        {% assign navigation_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
-        {% for p in navigation_pages %}
+        {% assign group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
+        {% for p in group_pages %}
           <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
             {{ p.short }}
           </a><br>
@@ -53,25 +53,22 @@
         
         <br>
         
-        {% if page.collection %}
-          {% assign collection = site.html_pages | where:"group",page.group | sort: 'order' %}
-          {% assign prev = collection | last %}
-          {% assign next = collection | first %}
+        {% assign prev = group_pages | last %}
+        {% assign next = group_pages | first %}
 
-          {% for item in collection %}
-            {% if item.short == page.short %}
-              {% unless forloop.first %}
-                {% assign prev = iterator %}
-              {% endunless %}
+        {% for item in group_pages %}
+          {% if item.short == page.short %}
+            {% unless forloop.first %}
+              {% assign prev = iterator %}
+            {% endunless %}
 
-              {% unless forloop.last %}
-                {% assign next = collection[forloop.index] %}
-              {% endunless %}
-            {% endif %}
+            {% unless forloop.last %}
+              {% assign next = group_pages[forloop.index] %}
+            {% endunless %}
+          {% endif %}
 
-            {% assign iterator = item %}
-          {% endfor %}
-        {% endif %}
+          {% assign iterator = item %}
+        {% endfor %}
 
         {% if prev %}
           <a href="{{ prev.url }}">{{ prev.short }}</a>
