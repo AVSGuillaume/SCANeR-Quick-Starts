@@ -1,7 +1,7 @@
 ---
-parent: Massive Simulation Home
 group: Massive Simulation
-short: Port the worspace to Linux
+short: Linux workspace
+order: 30
 ---
 
 :arrow_left: [Guide 2. Generate test cases on Windows](HT_Generate_test_cases.md)
