@@ -1,7 +1,7 @@
 ---
 group: Get started
 short: Open a scenario
-order: 20
+order: 30
 ---
 
 # How to open an existing scenario?
