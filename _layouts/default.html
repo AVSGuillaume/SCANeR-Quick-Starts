@@ -44,7 +44,6 @@
     {% if page.group %}
       <div id="nav_left">
         <h3>{{ page.group }}</h3><br>
-        <br>
         {% assign navigation_pages = site.html_pages | sort: 'order' %}
         {% for p in navigation_pages %}
           {% if p.group == page.group %}
