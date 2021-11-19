@@ -1,7 +1,7 @@
 ---
-parent: Massive Simulation Home
 group: Massive Simulation
 short: Analyze
+order: 50
 ---
 
 :arrow_left: [Guide 4. Run test cases on Linux](HT_Validate_test_cases_under_Linux.md)
