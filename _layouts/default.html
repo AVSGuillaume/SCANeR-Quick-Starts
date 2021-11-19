@@ -44,19 +44,17 @@
     {% if page.group %}
       <div id="nav_left">
         <h3>{{ page.group }}</h3><br>
-        {% assign navigation_pages = site.html_pages | sort: 'order' %}
+        {% assign navigation_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
         {% for p in navigation_pages %}
-          {% if p.group == page.group %}
-            <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
-              {{ p.short }}
-            </a><br>
-          {% endif %}
+          <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
+            {{ p.short }}
+          </a><br>
         {% endfor %}
         
         <br>
         
         {% if page.collection %}
-          {% assign collection = site[page.group] | sort: 'order' %}
+          {% assign collection = site.html_pages | where:"group",page.group | sort: 'order' %}
           {% assign prev = collection | last %}
           {% assign next = collection | first %}
 
