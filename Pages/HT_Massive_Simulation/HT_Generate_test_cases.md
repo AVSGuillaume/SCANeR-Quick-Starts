@@ -4,8 +4,6 @@ short: Generate scenarios
 order: 20
 ---
 
-:arrow_left: [Guide 1. Prepare SCANeR workspace on Windows](HT_Prepare_SCANeR_workspace_under_Windows.md)
-
 # Guide 2. How to generate known and unknown test cases?
 
 For Massive Simulation application you will need a list of scenarios to test and validate your systems under test in known and unknow situations.  
@@ -117,7 +115,4 @@ We now have to run these! How to? 3 methods:
 * On a local machine, as a parametric exploration, from explore GUI, click on `Execute selected test cases`. This action will call SCANeR compute, scenarios will be executed in sequence.
 * On a simulator, using SCANeR studio, all the produced scenarios are compatible with it. Nevertheless, such process is usually used to test and validate systems Massively, so we would prefer to use SCANeR compute.
 * On HPC/Cloud, SCANeR compute! Here is the one we were looking for and we’ll detail it into the next guide. SCANeR compute is SCANeR studio solver, it enables to run SCANeR simulation on HPC architecture. You’ll be able to handle it within your favorite IT architecture. It is compatible with any HPC platform (e.g. Azure, AWS, Alibaba) and supports any container solutions (e.g. Docker, Kubernetes). You’ll be able to run it in parallel for Massive Simulation application, design your job scheduling, etc.
-
-:arrow_right: [Guide: 3. Port SCANeR workspace on Linux](HT_Port_SCANeR_workspace_under_Linux.md)
-
 
