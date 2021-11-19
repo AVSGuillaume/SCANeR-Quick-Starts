@@ -4,8 +4,6 @@ short: Analyze
 order: 50
 ---
 
-:arrow_left: [Guide 4. Run test cases on Linux](HT_Validate_test_cases_under_Linux.md)
-
 # Guide 5. How to analyse all my results
 
 Once the simulations have been executed, you’ll get all test cases results (60 in our case).  
@@ -44,5 +42,3 @@ E.g.
 ```C
 python get_results.py ".\EVAL_ADAS_CTRL\Design of Experiment 1\testcases.xtc" results
 ```
-
-:arrow_right: [Already the end: Get back to Home](../../index.md)
