@@ -42,18 +42,20 @@
     </div>
      
     <!-- prepare variables -->
-    {% assign group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
-    {% for item in group_pages %}
-      {% if item.short == page.short %}
-        {% unless forloop.first %}
-          {% assign prev = iterator %}
-        {% endunless %}
-        {% unless forloop.last %}
-          {% assign next = group_pages[forloop.index] %}
-        {% endunless %}
-      {% endif %}
-      {% assign iterator = item %}
-    {% endfor %}
+    {% if page.group %}
+      {% assign group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
+      {% for item in group_pages %}
+        {% if item.short == page.short %}
+          {% unless forloop.first %}
+            {% assign prev = iterator %}
+          {% endunless %}
+          {% unless forloop.last %}
+            {% assign next = group_pages[forloop.index] %}
+          {% endunless %}
+        {% endif %}
+        {% assign iterator = item %}
+      {% endfor %}
+    {% endif %}
     
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
