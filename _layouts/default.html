@@ -40,21 +40,7 @@
           {% endif %}
         </header>
     </div>
-    
-    <!-- group nav -->
-
-    {% if page.group %}
-      <div id="nav_left">
-        <h3>{{ page.group }}</h3><br>
-        {% assign group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
-        {% for p in group_pages %}
-          <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
-            {{ p.short }}
-          </a><br>
-        {% endfor %}
-      </div>
-    {% endif %}
-   
+     
     <!-- find next & prev -->
 
     {% for item in group_pages %}
@@ -74,6 +60,21 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        
+        <!-- group nav -->
+        {% if page.group %}
+          <div id="nav_left">
+            <h3>{{ page.group }}</h3><br>
+            {% assign group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
+            {% for p in group_pages %}
+              <a href="{{site.baseurl}}/{{ p.url }}" {% if p.url == page.url %}class="current"{% endif %}>
+                {{ p.short }}
+              </a><br>
+            {% endfor %}
+          </div>
+        {% endif %}
+        
+        <!-- prev -->
         {% if prev %}
           <p>
             <img class="emoji" title=":arrow_left:" alt=":arrow_left:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b05.png" height="20" width="20">
@@ -83,8 +84,10 @@
           </p>
         {% endif %}
         
+        <!-- article -->
         {{ content }}
         
+        <!-- next -->
         {% if next %}
           <p>
             <img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20">
