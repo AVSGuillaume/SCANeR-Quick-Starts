@@ -4,8 +4,6 @@ short: Validate workspace
 order: 40
 ---
 
-:arrow_left: [Guide 3. Port SCANeR workspace on Linux](HT_Port_SCANeR_workspace_under_Linux.md)
-
 # Guide 4. How to validate the new SCANeR workspace for Linux before to run it on HPC
 
 Perform local test enables you to make sure that you did not miss anything before to run Massive Simulation.  
@@ -31,5 +29,3 @@ Here is a list of the remaining actions on your side, we offer services on deman
 
 SCANeR Standalone method supports any container solutions (e.g. Docker, Kubernetes).
 Ask us for details 😉
-
-:arrow_right: [Guide 5: SCANeR Analytics](HT_Analytics.md)
