@@ -4,8 +4,6 @@ short: Linux workspace
 order: 30
 ---
 
-:arrow_left: [Guide 2. Generate test cases on Windows](HT_Generate_test_cases.md)
-
 # Guide 3. How to port SCANeR workspace under Linux
 
 The SCANeR workspace we made up to now is for Windows (`SAMPLE_COMPUTE_LOCAL`).  
@@ -136,5 +134,3 @@ After these steps, you can make sure that you’re all set by editing `SCANeRcon
 You should have the following result if you use the configuration we deliver.  
 
 ![](./assets/SCANeRWorkspaceDone.png)
-
-:arrow_right: [Guide 4: Run test cases on Linux](HT_Validate_test_cases_under_Linux.md)
