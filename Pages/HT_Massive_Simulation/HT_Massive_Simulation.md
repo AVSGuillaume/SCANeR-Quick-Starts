@@ -1,7 +1,7 @@
 ---
-parent: Home
 group: Massive Simulation
-short: Massive Simulation Home
+short: Introduction
+order: 0
 ---
 
 # How to run a massive simulation to test and validate an ADAS
