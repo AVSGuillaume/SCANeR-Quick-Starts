@@ -1,7 +1,7 @@
 ---
-parent: Massive Simulation Home
 group: Massive Simulation
-short: Prepare the Windows workspace
+short: Windows workspace
+order: 10
 ---
 
 :arrow_left: [Home of Massive Simulation](HT_Massive_Simulation.md)
