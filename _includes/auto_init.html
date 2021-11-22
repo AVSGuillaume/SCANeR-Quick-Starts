@@ -20,12 +20,12 @@
 
   <!-- if no next/prev page, link to first/last page of next/prev group -->
   <h1>group</h1>  
-  {% if prev == empty %}
+  {% unless prev %}
     <h1>PREV</h1>
     {% assign prev_group_pages = site.html_pages | where:"group",group.prev | sort: 'order' %}
     {% assign prev = prev_group_pages.last %}
   {% endif %}
-  {% if next == empty %}
+  {% unless next %}
     <h1>NEXT</h1>
     {% assign next_group_pages = site.html_pages | where:"group",group.next | sort: 'order' %}
     {% assign next = next_group_pages.first %}
