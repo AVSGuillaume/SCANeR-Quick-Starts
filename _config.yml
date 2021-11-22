@@ -16,14 +16,16 @@ groups:
     next: That
 
 collections:
-  groups:
-    Massive Simulation:
+  lols:
+    massive_simulation:
+      prev: THISE
+      next: THATE
 
 defaults:
   -
     scope:
       path: ""
-      group: "Get Ready"
+      page.group: "Get Ready"
     values:
       next: "Get Started"
       
