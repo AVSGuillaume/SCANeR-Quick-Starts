@@ -1,5 +1,5 @@
 ---
-group: Get started
+group: Get Started
 short: User interface
 order: 20
 ---
