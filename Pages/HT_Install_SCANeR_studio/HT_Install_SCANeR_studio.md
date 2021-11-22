@@ -1,8 +1,7 @@
 ---
-parent: Home
 group: Get Ready
 short: Install the Trial
-long: How to install SCANeR studio ?
+order: 20
 ---
 
 # How to install SCANeR ?
