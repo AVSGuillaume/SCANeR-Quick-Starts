@@ -3,7 +3,6 @@ parent: Home
 group: Get Ready
 short: Install the Trial
 long: How to install SCANeR studio ?
-next: Massive Simulation
 ---
 
 # How to install SCANeR ?
