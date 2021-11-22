@@ -10,7 +10,11 @@ github:
   youtube_url: https://www.youtube.com/channel/UCYNNe9SaA3LjCFb2qXmhkoA
 google_analytics: G-40Y0DQQVZS
 
-collections:
-  Massive Simulation:
-    output: true
-    permalink: /:collection/:title
+defaults:
+    scope:
+      path: ""
+      group: "Get ready"
+    values:
+      next: "Get started"
+      
+    
