@@ -63,11 +63,11 @@
       {% if prev == empty and group.prev != empty %}
         {% assign prev_group_pages = site.html_pages | where:"group",group.prev | sort: 'order' %}
         {% assign prev = prev_group_pages.last %}
-      {% endunless %}
+      {% endif %}
       {% if next == empty and group.next != empty %}
         {% assign next_group_pages = site.html_pages | where:"group",group.next | sort: 'order' %}
         {% assign next = next_group_pages.first %}
-      {% endunless %}
+      {% endif %}
     
     {% endif %}
     
@@ -86,12 +86,7 @@
       </div>
       {% endif %}
       
-      <p> HELLO2 {{ site.groups.massive_simulation.prev }}　{{ site.groups.massive_simulation.next }}</p>
-      <br>
-      <p> HELLO3 {{ site.lols.massive_simulation.prev }}　{{ site.lols.massive_simulation.next }}</p>
-      <p> HELLO4 {{ site.show_downloads }} {{ site.theme }} {{ site.github.repository_url }}</p>
-      
-      <p> HELLO5 {{ site.show_downloads }} {{ site.theme }} {{ site.github.repository_url }}</p>
+      <p> HELLO6 {{ site.groups.massive_simulation.prev }}　{{ site.groups.massive_simulation.next }}</p>
             
       <section id="main_content" class="inner">
         <!-- prev -->
