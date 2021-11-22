@@ -60,11 +60,11 @@
       {% endfor %}
       
       <!-- if no next/prev page, link to first/last page of next/prev group -->
-      {% unless prev %}
+      {% if prev == empty and group.prev != empty %}
         {% assign prev_group_pages = site.html_pages | where:"group",group.prev | sort: 'order' %}
         {% assign prev = prev_group_pages.last %}
       {% endunless %}
-      {% unless next %}
+      {% if next == empty and group.next != empty %}
         {% assign next_group_pages = site.html_pages | where:"group",group.next | sort: 'order' %}
         {% assign next = next_group_pages.first %}
       {% endunless %}
