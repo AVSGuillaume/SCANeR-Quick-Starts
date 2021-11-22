@@ -44,7 +44,7 @@
     <!-- prepare variables -->
     {% if page.group %}
       {% assign group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
-      {% assign group = site.groups | find: "name", page.group %}
+      {% assign current_group = site.groups | where:"name",page.group | first %}
       
       <!-- next/prev based on pages order -->
       {% for item in group_pages %}
@@ -60,7 +60,7 @@
       {% endfor %}
       
       <!-- if no next/prev page, link to first/last page of next/prev group -->
-      {% if prev == empty and group.prev != empty %}
+      {% if prev == empty and current_group.prev != empty %}
         {% assign prev_group_pages = site.html_pages | where:"group",group.prev | sort: 'order' %}
         {% assign prev = prev_group_pages.last %}
       {% endif %}
@@ -86,8 +86,8 @@
       </div>
       {% endif %}
       
-      <p> vB2 {{ site.groups }}</p> <br>
-      <p> group : {{ group }} </p> <br>
+      <p> vB3 {{ site.groups }}</p> <br>
+      <p> current_group : {{ current_group }} </p> <br>
       <p> prev pages : {{ prev_group_pages }} </p><br>
       <p> prev : {{ prev }} </p><br>
       <p> next pages : {{ next_group_pages }} </p><br>
