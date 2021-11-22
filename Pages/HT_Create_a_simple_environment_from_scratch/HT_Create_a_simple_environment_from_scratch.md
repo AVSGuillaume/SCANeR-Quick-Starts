@@ -1,5 +1,5 @@
 ---
-Group: First Simulation
+group: First Simulation
 short: Create a Terrain
 ---
 
