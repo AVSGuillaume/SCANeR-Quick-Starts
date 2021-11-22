@@ -1,3 +1,8 @@
+---
+Group: First Simulation
+short: Create a Terrain
+---
+
 # How to create a road network from scratch?
 
 In SCANeR, the simulation is composed of `actors` performing actions according to a `scenario` that has been created by the user. This `scenario` takes place in an environement we call the `terrain` of the `scenario`. There are default environments present in SCANeR default data set that you can use, but you can also create your own.
