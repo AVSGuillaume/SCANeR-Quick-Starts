@@ -44,12 +44,9 @@
     <!-- prepare variables -->
     {% if page.group %}
       {% assign group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
+      {{% assign group = site.groups | find: "name", page.group %}}
       
-      {% if page.next %}
-        {% assign next_group_pages = site.html_pages | where:"group",page.next | sort: 'order' %}
-        {% assign next = next_group_pages.first %}
-      {% endif %}
-    
+      <!-- next/prev based on pages order -->
       {% for item in group_pages %}
         {% if item.short == page.short %}
           {% unless forloop.first %}
@@ -61,6 +58,16 @@
         {% endif %}
         {% assign iterator = item %}
       {% endfor %}
+      
+      <!-- if no next/prev page, link to first/last page of next/prev group -->
+      {% unless prev %}
+        {% assign prev_group_pages = site.html_pages | where:"group",group.prev | sort: 'order' %}
+        {% assign prev = prev_group_pages.last %}
+      {% endunless %}
+      {% unless next %}
+        {% assign next_group_pages = site.html_pages | where:"group",group.next | sort: 'order' %}
+        {% assign next = next_group_pages.first %}
+      {% endunless %}
     
     {% endif %}
     
@@ -83,6 +90,8 @@
       <br>
       <p> HELLO3 {{ site.lols.massive_simulation.prev }}　{{ site.lols.massive_simulation.next }}</p>
       <p> HELLO4 {{ site.show_downloads }} {{ site.theme }} {{ site.github.repository_url }}</p>
+      
+      <p> HELLO5 {{ site.show_downloads }} {{ site.theme }} {{ site.github.repository_url }}</p>
             
       <section id="main_content" class="inner">
         <!-- prev -->
