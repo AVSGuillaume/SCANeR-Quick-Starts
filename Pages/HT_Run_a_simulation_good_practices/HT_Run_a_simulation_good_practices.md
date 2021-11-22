@@ -1,5 +1,5 @@
 ---
-group: Get started
+group: Get Started
 short: Run a simulation
 order: 40
 ---
