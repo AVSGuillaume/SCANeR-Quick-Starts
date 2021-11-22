@@ -12,14 +12,14 @@ google_analytics: G-40Y0DQQVZS
 
 groups:
   massive_simulation:
-    prev: This
-    next: That
+    prev: "This"
+    next: "That"
 
 collections:
   lols:
     massive_simulation:
-      prev: THISE
-      next: THATE
+      prev: "THISE"
+      next: "THATE"
 
 defaults:
   -
