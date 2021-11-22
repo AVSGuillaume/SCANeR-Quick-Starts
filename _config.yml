@@ -10,23 +10,21 @@ github:
   youtube_url: https://www.youtube.com/channel/UCYNNe9SaA3LjCFb2qXmhkoA
 google_analytics: G-40Y0DQQVZS
 
-collections:
-  lols:
-    massive_simulation:
-      prev: "THISE"
-      next: "THATE"
-
 groups:
-  massive_simulation:
-    prev: "This"
-    next: "That"
-
-defaults:
   -
-    scope:
-      path: ""
-      page.group: "Get Ready"
-    values:
-      next: "Get Started"
+    name: Get Ready
+    next: Get Started
+  -
+    name: Get Started
+    prev: Get Ready
+    next: First Simulation
+  - 
+    name: Workspace
+    prev: Get Started
+    next: First Simulation
+  -
+    name: First Simulation
+    prev: Get Started
+    next: Intermediate
       
     
