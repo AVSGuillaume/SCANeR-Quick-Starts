@@ -47,7 +47,7 @@
       
       {% if page.next %}
         {% assign next_group_pages = site.html_pages | where:"group",page.next | sort: 'order' %}
-        {% assign next = next_group_pages.first.short %}
+        {% assign next = next_group_pages.first %}
       {% endif %}
     
       {% for item in group_pages %}
