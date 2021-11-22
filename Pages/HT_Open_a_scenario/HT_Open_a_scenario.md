@@ -1,5 +1,5 @@
 ---
-group: Get started
+group: Get Started
 short: Open a scenario
 order: 30
 ---
