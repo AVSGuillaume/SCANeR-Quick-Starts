@@ -19,10 +19,10 @@
   {% endfor %}
 
   <!-- if no next/prev page, link to first/last page of next/prev group -->
-  <h1>group</h1>  
+  <h1>group v2</h1>  
   {% unless prev %}
     <h1>PREV</h1>
-    {% assign prev_group_pages = site.html_pages | where:"group",current_group.prev | sort: 'order' %}
+    {% assign prev_group_pages = site.html_pages | where:"group",page.group | sort: 'order' %}
     {% assign prev = prev_group_pages.last %}
   {% endunless %}
   {% unless next %}
