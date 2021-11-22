@@ -20,10 +20,14 @@
 
   <!-- if no next/prev page, link to first/last page of next/prev group -->
   {% unless prev %}
-    {% assign prev = site.html_pages | where:"group",current_group.prev | sort: 'order' | first %}
+    {% if current_group.prev %}
+      {% assign prev = site.html_pages | where:"group",current_group.prev | sort: 'order' | last %}
+    {% endif %}
   {% endunless %}
   {% unless next %}
-    {% assign next = site.html_pages | where:"group",current_group.next | sort: 'order' | first %}
+    {% if current_group.next %}
+      {% assign next = site.html_pages | where:"group",current_group.next | sort: 'order' | first %}
+    {% endif %}
   {% endunless %}
 
 {% endif %}
