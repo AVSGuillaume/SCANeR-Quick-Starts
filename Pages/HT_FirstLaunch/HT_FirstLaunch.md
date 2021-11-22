@@ -1,5 +1,5 @@
 ---
-group: Get started
+group: Get Started
 short: First launch
 order: 10
 ---
