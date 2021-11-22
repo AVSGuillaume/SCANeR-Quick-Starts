@@ -2,7 +2,7 @@
 group: Get Ready
 short: Download the Trial
 long: How to download the evaluation version of SCANeR ?
-rank: 1
+order: 10
 ---
 
 # How to download the evaluation version of SCANeR?
