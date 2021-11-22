@@ -13,8 +13,8 @@ google_analytics: G-40Y0DQQVZS
 defaults:
     scope:
       path: ""
-      group: "Get ready"
+      group: "Get Ready"
     values:
-      next: "Get started"
+      next: "Get Started"
       
     
