@@ -3,10 +3,8 @@ parent: Home
 group: Get Ready
 short: Install the Trial
 long: How to install SCANeR studio ?
-rank: 1
+next: Get Started
 ---
-
-:arrow_left: [Download the evaluation version of SCANeR](../HT_Download_Trial_SCANeR/HT_Download_Trial_SCANeR.md)
 
 # How to install SCANeR ?
 
@@ -86,4 +84,3 @@ Congratulations, SCANeR is now installed and ready to run!
 
 The SCANeR Trial installer includes an automatic 45 days license.
  
-:arrow_right: [First launch](../HT_FirstLaunch/HT_FirstLaunch.md)
